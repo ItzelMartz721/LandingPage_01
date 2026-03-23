@@ -10,10 +10,17 @@
   --max-width: 1200px;
 }
 
+
+/* Reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: var(--white);
 }
 
 img {
@@ -30,6 +37,8 @@ ul {
   list-style: none;
 }
 
+
+/* Layout Global */
 nav {
   position: fixed;
   isolation: isolate;
@@ -37,75 +46,88 @@ nav {
   z-index: 9;
 }
 
-
-
-/* Style Body */
-body {
-  background-color: #0A0A0A;
-  color: #FFFFFF;
-}
-
 /* Style Navbar */
 .navbar {
+  width: 100%;
+  
+  font-family: sans-serif;
+}
+
+.navbar__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: sans-serif;
-  color: #FFFFFF;
-  padding: 1.5rem 4.5rem;
+
+  padding: 1.5rem 2rem;
 }
 
 .navbar__logo-link {
   font-family: 'Nippo';
   font-size: 1.6rem;
-  color: #FFFFFF;
+  color: var(--white);
+}
+
+.navbar__logo-accent {
+  color: var(--primary-color);
+  text-shadow: 0 0 8px var(--primary-color-neon);
 }
 
 .navbar__menu {
   display: flex;
   gap: 3rem;
-  padding: 0;
+
   margin: 0;
+  padding: 0;
+  
   font-size: 1rem;
 }
 
 .navbar__link {
-  color: #DDD;
-  transition: all 0.3s ease;
+  color: var(--white);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .navbar__link:hover {
-  color: #9A365A;
-  text-shadow: 0px 0 12px #9A365D;
-}
-
-.navbar__logo-accent {
-  color: #9A365A;
-  text-shadow: 0 0 8px #9A365D;
+  color: var(--primary-color);
+  text-shadow: 0 0 12px var(--primary-color-neon);
 }
 
 .navbar__button {
-  border: 2px solid #9A365A;
-  border-radius: 30px;
   margin: 0;
   padding: 0.8rem 1.6rem;
+  
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  
   font-size: 1rem;
-  color: #FFFFFF;
+  color: var(--white);
+  
   transition: all 0.3s ease;
 }
 
 .navbar__button:hover {
-  background-color: #9A365A;
-  box-shadow: 0 0 10px #9A365D;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color-neon);
 }
 
-/* Stye Hero */
+/* Style Hero */
 
 .hero {
+  width: 100%;
+}
+
+.hero__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 1.6rem 4.5rem;
+
+  padding: 4rem 2rem;
 }
 
 /* .hero__content {
